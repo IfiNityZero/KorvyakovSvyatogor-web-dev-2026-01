@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Оформить заказ — ЛанчСити</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/lunch.css">
+
+</head>
+<body data-lab="8">
+  <header>
+    <h1>ЛанчСити</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="lunch.html">Собрать ланч</a>
+      <a href="checkout.html" class="active">Оформить заказ</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Состав заказа</h2>
+      <p id="checkout-empty">Ничего не выбрано. Чтобы добавить блюда в заказ, перейдите на страницу <a href="lunch.html">Собрать ланч</a>.</p>
+      <div id="checkout-dishes" class="dishes"></div>
+    </section>
+    <div id="checkout-form-wrap">
+    <section>
+      <h2>Сделать заказ</h2>
+      <form id="order-form" class="order-form" action="https://httpbin.org/post" method="post">
+        <div>
+          <h3>Ваш заказ</h3>
+          
+          <div id="order-summary"><p>Ничего не выбрано</p></div>
+          <p id="order-cost" hidden></p>
+
+          <label for="comment">Комментарий</label>
+          <textarea id="comment" name="comment"></textarea>
+          
+          <input type="hidden" name="soup" id="hidden-soup">
+          <input type="hidden" name="main_course" id="hidden-main">
+          <input type="hidden" name="drink" id="hidden-drink">
+          <input type="hidden" name="salad" id="hidden-salad">
+          <input type="hidden" name="dessert" id="hidden-dessert">
+
+        </div>
+        <div>
+          <h3>Данные клиента</h3>
+          <label for="full_name">Имя</label>
+          <input id="full_name" name="full_name" type="text" required>
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+          <input id="subscribe" name="subscribe" type="checkbox" checked style="width:auto;display:inline">
+          <label for="subscribe" style="display:inline">Хочу получать новости и акции</label>
+          <label for="phone">Телефон</label>
+          <input id="phone" name="phone" type="tel" required>
+          <label for="delivery_address">Адрес</label>
+          <input id="delivery_address" name="delivery_address" type="text" required>
+          <fieldset>
+            <legend>Время доставки</legend>
+            <input id="now" name="delivery_type" type="radio" value="now" required style="width:auto;display:inline">
+            <label for="now" style="display:inline">Как можно скорее</label>
+            <input id="by_time" name="delivery_type" type="radio" value="by_time" style="width:auto;display:inline">
+            <label for="by_time" style="display:inline">Ко времени</label>
+          </fieldset>
+          <label for="delivery_time">Укажите время</label>
+          <input id="delivery_time" name="delivery_time" type="time" min="07:00" max="23:00" step="300">
+          <div class="form-actions">
+            <button type="reset" class="reset">Сбросить</button>
+            <button type="submit" class="submit">Отправить</button>
+          </div>
+        </div>
+      </form>
+    </section>
+    </div>
+  </main>
+  <footer id="contacts">
+    <p>ЛанчСити — доставка бизнес-ланчей по Москве</p>
+    <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+    <p>Почта: <a href="mailto:hello@lunchcity.ru">hello@lunchcity.ru</a></p>
+    <p>Адрес: ул. Прянишникова, 2А</p>
+  </footer>
+  <script src="../js/config.js"></script>
+  <script src="../js/dishes-data.js"></script>
+  <script src="../js/app.js" defer></script>
+</body>
+</html>

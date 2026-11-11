@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Собрать ланч — ЛанчСити</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/lunch.css">
+
+</head>
+<body data-lab="8">
+  <header>
+    <h1>ЛанчСити</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="lunch.html" class="active">Собрать ланч</a>
+      <a href="checkout.html">Оформить заказ</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <h2>Доступные варианты ланча</h2>
+      <div class="combos">
+        <div class="combo">          <div class="combo-item">
+            <img src="../images/icon-soup.jpg" alt="Суп">
+            <span>Суп</span>
+          </div>
+          <div class="combo-item">
+            <img src="../images/icon-main.jpg" alt="Главное блюдо">
+            <span>Главное блюдо</span>
+          </div>
+          <div class="combo-item">
+            <img src="../images/icon-salad.jpg" alt="Салат">
+            <span>Салат</span>
+          </div>
+          <div class="combo-item">
+            <img src="../images/icon-drink.jpg" alt="Напиток">
+            <span>Напиток</span>
+          </div>
+        </div>
+        <div class="combo">          <div class="combo-item">
+            <img src="../images/icon-soup.jpg" alt="Суп">
+            <span>Суп</span>
+          </div>
+          <div class="combo-item">
+            <img src="../images/icon-main.jpg" alt="Главное блюдо">
+            <span>Главное блюдо</span>
+          </div>
+          <div class="combo-item">
+            <img src="../images/icon-drink.jpg" alt="Напиток">
+            <span>Напиток</span>
+          </div>
+        </div>
+        <div class="combo">          <div class="combo-item">
+            <img src="../images/icon-soup.jpg" alt="Суп">
+            <span>Суп</span>
+          </div>
+          <div class="combo-item">
+            <img src="../images/icon-salad.jpg" alt="Салат">
+            <span>Салат</span>
+          </div>
+          <div class="combo-item">
+            <img src="../images/icon-drink.jpg" alt="Напиток">
+            <span>Напиток</span>
+          </div>
+        </div>
+        <div class="combo">          <div class="combo-item">
+            <img src="../images/icon-main.jpg" alt="Главное блюдо">
+            <span>Главное блюдо</span>
+          </div>
+          <div class="combo-item">
+            <img src="../images/icon-salad.jpg" alt="Салат">
+            <span>Салат</span>
+          </div>
+          <div class="combo-item">
+            <img src="../images/icon-drink.jpg" alt="Напиток">
+            <span>Напиток</span>
+          </div>
+        </div>
+        <div class="combo">          <div class="combo-item">
+            <img src="../images/icon-main.jpg" alt="Главное блюдо">
+            <span>Главное блюдо</span>
+          </div>
+          <div class="combo-item">
+            <img src="../images/icon-drink.jpg" alt="Напиток">
+            <span>Напиток</span>
+          </div>
+        </div>
+      </div>
+      <p>Десерт можно добавить к любому виду ланча.</p>
+    </section>
+    <section data-category="soup">
+      <h2>Выберите суп</h2>
+      <div class="filters"><button type="button" data-kind="fish">рыбный</button><button type="button" data-kind="meat">мясной</button><button type="button" data-kind="veg">вегетарианский</button></div>
+      <div class="dishes"></div>
+    </section>
+    <section data-category="main">
+      <h2>Выберите главное блюдо</h2>
+      <div class="filters"><button type="button" data-kind="fish">рыбное</button><button type="button" data-kind="meat">мясное</button><button type="button" data-kind="veg">вегетарианское</button></div>
+      <div class="dishes"></div>
+    </section>
+    <section data-category="salad">
+      <h2>Выберите салат или стартер</h2>
+      <div class="filters"><button type="button" data-kind="fish">рыбный</button><button type="button" data-kind="meat">мясной</button><button type="button" data-kind="veg">вегетарианский</button></div>
+      <div class="dishes"></div>
+    </section>
+    <section data-category="drink">
+      <h2>Выберите напиток</h2>
+      <div class="filters"><button type="button" data-kind="cold">холодный</button><button type="button" data-kind="hot">горячий</button></div>
+      <div class="dishes"></div>
+    </section>
+    <section data-category="dessert">
+      <h2>Выберите десерт</h2>
+      <div class="filters"><button type="button" data-kind="small">маленькая порция</button><button type="button" data-kind="medium">средняя порция</button><button type="button" data-kind="large">большая порция</button></div>
+      <div class="dishes"></div>
+    </section>
+    <div class="checkout-bar" hidden>
+      <span>Итого: <b id="bar-total">0 ₽</b></span>
+      <a href="checkout.html">Перейти к оформлению</a>
+    </div>
+  </main>
+  <footer id="contacts">
+    <p>ЛанчСити — доставка бизнес-ланчей по Москве</p>
+    <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+    <p>Почта: <a href="mailto:hello@lunchcity.ru">hello@lunchcity.ru</a></p>
+    <p>Адрес: ул. Прянишникова, 2А</p>
+  </footer>
+  <script src="../js/config.js"></script>
+  <script src="../js/dishes-data.js"></script>
+  <script src="../js/app.js" defer></script>
+</body>
+</html>

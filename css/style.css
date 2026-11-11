@@ -1,0 +1,456 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #222;
+  background: #f7f4ef;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer,
+main,
+nav,
+.wrap {
+  margin: 0 auto;
+  padding: 16px 24px;
+}
+
+header,
+footer {
+  width: 100%;
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fff;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Manrope", Arial, sans-serif;
+  font-size: 16px;
+  color: #fff;
+}
+
+nav a:hover {
+  color: tomato;
+}
+
+nav a.active {
+  color: tomato;
+}
+
+main {
+  width: 100%;
+  max-width: 1100px;
+  flex: 1 0 auto;
+}
+
+section {
+  margin: 24px 0;
+  padding: 8px 0;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1b1b1b;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.about img {
+  width: 640px;
+  height: auto;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.advantages ul {
+  padding-left: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+table th,
+table td {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+}
+
+footer {
+  margin-top: auto;
+}
+
+footer p,
+footer a {
+  color: #fff;
+  font-size: 14px;
+}
+
+footer a {
+  text-decoration: none;
+  font-family: "Manrope", Arial, sans-serif;
+}
+
+footer a:hover {
+  color: tomato;
+}
+
+.dishes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+}
+
+.dish {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  border-radius: 35px;
+  cursor: pointer;
+  filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+  background-color: #fff;
+  border: 2px solid transparent;
+}
+
+.dish:hover,
+.dish.selected {
+  border: 2px solid tomato;
+}
+
+.dish:hover button,
+.dish.selected button {
+  background-color: tomato;
+  color: #fff;
+}
+
+.dish img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 35px;
+}
+
+.dish .price {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.dish .name {
+  font-size: 18px;
+  font-weight: 600;
+  min-height: 48px;
+}
+
+.dish .count {
+  color: gray;
+  margin-top: auto;
+}
+
+.dish button {
+  background-color: #f1eee9;
+  margin-top: 12px;
+  padding: 10px 30px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 0;
+  font-family: inherit;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.filters button {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 20px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.filters button.active {
+  background: tomato;
+  color: #fff;
+  border-color: tomato;
+}
+
+.order-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  background: #fff;
+  padding: 24px;
+  border-radius: 16px;
+}
+
+.order-form h3 {
+  margin-top: 0;
+}
+
+.order-form label,
+.order-form select,
+.order-form input,
+.order-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.order-form select,
+.order-form input,
+.order-form textarea {
+  height: 40px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.order-form textarea {
+  height: 90px;
+}
+
+.order-form fieldset {
+  border: 1px solid #ddd;
+  margin: 12px 0;
+}
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.form-actions button {
+  padding: 10px 24px;
+  border: 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-actions .submit {
+  background: tomato;
+  color: #fff;
+}
+
+.form-actions .reset {
+  background: #eee;
+}
+
+.combos {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+}
+
+.combo {
+  display: flex;
+  gap: 8px;
+  background: #fff;
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.combo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.combo-item img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.2s;
+}
+
+.combo-item img:hover {
+  transform: translateY(-6px) scale(1.12);
+}
+
+.combo-item span {
+  font-size: 12px;
+  text-align: center;
+}
+
+.combo-note {
+  font-size: 10px;
+  color: #666;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 50;
+}
+
+.modal.open {
+  display: flex;
+}
+
+.modal-card {
+  background: #fff;
+  padding: 24px;
+  border-radius: 12px;
+  min-width: 280px;
+  max-width: 520px;
+  position: relative;
+}
+
+.modal-card .ok {
+  margin-top: 16px;
+}
+
+.modal-card .ok:hover {
+  background: tomato;
+  color: #fff;
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  border: 0;
+  background: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.checkout-bar {
+  position: sticky;
+  bottom: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #1b1b1b;
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 12px;
+}
+
+.checkout-bar a[aria-disabled="true"] {
+  pointer-events: none;
+  opacity: 0.45;
+}
+
+.checkout-bar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.checkout-bar a:hover {
+  color: tomato;
+}
+
+.orders-table {
+  width: 100%;
+  background: #fff;
+}
+
+@media (max-width: 800px) {
+  .dishes,
+  .combos,
+  .order-form {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  nav {
+    justify-content: space-between;
+  }
+
+  .about img {
+    width: 500px;
+  }
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    font-size: 20px;
+  }
+
+  section h2 {
+    text-align: center;
+  }
+
+  .dishes,
+  .combos,
+  .order-form {
+    grid-template-columns: 1fr;
+  }
+
+  .about img {
+    width: 100%;
+  }
+
+  table {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 400px) {
+  table {
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лендинг — ЛанчСити</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body data-lab="10">
+  <header>
+    <h1>ЛанчСити</h1>
+    <nav>
+      <a href="index.html">Главная</a>
+      <a href="lunch.html">Собрать ланч</a>
+      <a href="checkout.html">Оформить заказ</a>
+      <a href="orders.html">Заказы</a>
+      <a href="landing.html" class="active">Лендинг</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+  </header>
+  <main class="container py-4">
+    <section class="row align-items-center g-4 py-5">
+      <div class="col-lg-6">
+        <h2 class="display-5 fw-bold">Горячий бизнес-ланч к вашему времени</h2>
+        <p class="lead">ЛанчСити готовит супы, горячее, салаты и десерты и привозит их в офисы Москвы.</p>
+      </div>
+      <div class="col-lg-6">
+        <img class="img-fluid rounded" src="../images/company.jpg" alt="ЛанчСити">
+      </div>
+    </section>
+    <section class="row text-center g-4 py-4">
+      <div class="col-md-4"><div class="p-4 bg-white rounded shadow-sm"><h3>К времени</h3><p>Доставка с 7:00 до 23:00 с шагом 5 минут.</p></div></div>
+      <div class="col-md-4"><div class="p-4 bg-white rounded shadow-sm"><h3>Комбо</h3><p>Пять готовых схем ланча плюс десерт по желанию.</p></div></div>
+      <div class="col-md-4"><div class="p-4 bg-white rounded shadow-sm"><h3>Свежо</h3><p>Блюда дня без заморозки и полуфабрикатов.</p></div></div>
+    </section>
+    <section class="text-center py-5">
+      <h2>Соберите обед за пару минут</h2>
+      <p>Выберите суп, горячее и напиток — остальное подскажет меню.</p>
+      <a class="btn btn-danger btn-lg" href="lunch.html">Собрать ланч</a>
+    </section>
+    <section class="row g-4 py-4">
+      <div class="col-md-6">
+        <h2>Напишите нам</h2>
+        <form>
+          <div class="mb-3"><label class="form-label" for="fb-name">Имя</label><input class="form-control" id="fb-name"></div>
+          <div class="mb-3"><label class="form-label" for="fb-email">Email</label><input class="form-control" id="fb-email" type="email"></div>
+          <div class="mb-3"><label class="form-label" for="fb-msg">Сообщение</label><textarea class="form-control" id="fb-msg"></textarea></div>
+          <button class="btn btn-dark" type="button">Отправить</button>
+        </form>
+      </div>
+      <div class="col-md-6">
+        <h2>Контакты</h2>
+        <p>+7 (495) 123-45-67</p>
+        <p>hello@lunchcity.ru</p>
+        <p>ул. Прянишникова, 2А</p>
+      </div>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <footer id="contacts">
+    <p>ЛанчСити — доставка бизнес-ланчей по Москве</p>
+    <p>Телефон: <a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+    <p>Почта: <a href="mailto:hello@lunchcity.ru">hello@lunchcity.ru</a></p>
+    <p>Адрес: ул. Прянишникова, 2А</p>
+  </footer>
+</body>
+</html>
