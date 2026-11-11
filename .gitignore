@@ -1,0 +1,17 @@
+# ОС
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Редакторы
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Локальные настройки и секреты
+.env
+.env.*
+!.env.example

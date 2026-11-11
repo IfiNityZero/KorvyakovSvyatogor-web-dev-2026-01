@@ -2,7 +2,6 @@
   const LAB = Number(document.body.dataset.lab || 1);
   const STORAGE_KEY = "lunchcity-order";
   const ORDERS_KEY = "lunchcity-orders";
-  const API_DISHES = "https://edu.std-900.ist.mospolytech.ru/labs/api/dishes";
   const API_BASE = "https://edu.std-900.ist.mospolytech.ru/labs/api";
   const API_KEY = window.APP_CONFIG && window.APP_CONFIG.apiKey;
 
@@ -519,17 +518,12 @@
       }
       return Promise.resolve(dishes);
     }
-    return fetch(API_DISHES)
+    return fetch("../data/dishes.json")
       .then(function (r) {
-        if (!r.ok) throw new Error("api");
+        if (!r.ok) throw new Error("Не удалось загрузить data/dishes.json");
         return r.json();
       })
-      .then(function (data) { dishes = data.map(normalizeDish); })
-      .catch(function () {
-        return fetch("../data/dishes.json")
-          .then(function (r) { return r.json(); })
-          .then(function (data) { dishes = data.map(normalizeDish); });
-      });
+      .then(function (data) { dishes = data.map(normalizeDish); });
   }
 
   if (LAB >= 8) loadStored();
