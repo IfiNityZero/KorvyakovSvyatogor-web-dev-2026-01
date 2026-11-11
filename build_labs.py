@@ -418,16 +418,30 @@ TITLES_LAB = {
     4: "Блюда на JavaScript",
     5: "Фильтры и новые категории",
     6: "Комбо и уведомления",
-    7: "Загрузка блюд из API",
+    7: "Загрузка блюд из JSON",
     8: "Оформление заказа и localStorage",
     9: "История заказов",
     10: "Лендинг на Bootstrap 5",
 }
 
 
+LAB_PAGES = {
+    1: "index.html",
+    2: "lunch.html",
+    3: "lunch.html",
+    4: "lunch.html",
+    5: "lunch.html",
+    6: "lunch.html",
+    7: "lunch.html",
+    8: "lunch.html",
+    9: "orders.html",
+    10: "landing.html",
+}
+
+
 def hub():
     links = "\n".join(
-        f'    <p><a href="lab{n}/index.html">Лабораторная {n}. {TITLES_LAB[n]}</a></p>'
+        f'    <li><a href="lab{n}/{LAB_PAGES[n]}">Лабораторная {n}. {TITLES_LAB[n]}</a></li>'
         for n in range(1, 11)
     )
     return f"""<!DOCTYPE html>
@@ -435,11 +449,13 @@ def hub():
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Лабы по WEB</title>
+  <title>Лабораторные по веб-разработке</title>
 </head>
 <body>
-  <h1>Лабы по WEB</h1>
+  <h1>Лабораторные по веб-разработке</h1>
+  <ul>
 {links}
+  </ul>
 </body>
 </html>
 """
